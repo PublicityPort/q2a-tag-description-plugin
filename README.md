@@ -12,7 +12,7 @@ This is a copy of http://docs.question2answer.org/plugins/tutorial/
 ## Installation ##
 
 * Install [Question2Answer][]. This plugin requires at least version 1.6 (see the change log for details)
-* Make sure the [cURL][] and [JSON][] extensions are installed and enabled in PHP. HybridAuth library requires these extensions in order to work properly.
+
 * Get the source code for this plugin from [Github][], either using [Git][], or downloading directly:
 
    - To download using git, install git and then type 
@@ -33,11 +33,8 @@ This is a copy of http://docs.question2answer.org/plugins/tutorial/
 
   [Question2Answer]: http://www.question2answer.org/install.php
   [Git]: http://git-scm.com/
-  [Github]: https://github.com/alixandru/q2a-publicityport-login
-  [cURL]: http://www.php.net/manual/en/book.curl.php
-  [JSON]: http://www.php.net/manual/en/book.json.php
-  [download]: https://github.com/alixandru/q2a-publicityport-login/archive/master.zip
-
+  [Github]: https://github.com/PublicityPort/q2a-tag-description-plugin
+  
 
 ## Disclaimer ##
 This code has not been extensively tested on high-traffic installations of Q2A. You should perform your own tests before using this plugin on a live (production) environment. 
