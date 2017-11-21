@@ -10,7 +10,7 @@
 	Plugin Author URI: http://www.question2answer.org/
 	Plugin License: GPLv2
 	Plugin Minimum Question2Answer Version: 1.5
-	Plugin Update Check URI: 
+	Plugin Update Check URI: https://raw.githubusercontent.com/PublicityPort/q2a-tag-description-plugin/master/qa-plugin.php
 */
 
 if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser

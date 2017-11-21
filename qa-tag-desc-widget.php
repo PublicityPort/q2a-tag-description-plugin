@@ -26,13 +26,18 @@ class qa_tag_descriptions_widget {
 		
 		if (strlen($description)) {
 			echo '<SPAN STYLE="font-size:'.(int)qa_opt('plugin_tag_desc_font_size').'px;">';
-			echo qa_html($description);
+			echo $description;
 			echo '</SPAN>';
 			if ($allowediting)
 				echo ' - <A HREF="'.$editurlhtml.'">edit</A>';
 
-		} elseif ($allowediting)
+		} elseif ($allowediting){
 			echo '<A HREF="'.$editurlhtml.'">'.qa_lang_html('plugin_tag_desc/create_desc_link').'</A>';
+		} else{
+			echo str_replace('^', qa_html($tag), qa_lang('plugin_tag_desc/no_desc'));
+		}
+			
+			//qa_lang_html_sub('plugin_tag_desc/no_desc', qa_html($tag));
 	}
 
 	function option_default($option)
