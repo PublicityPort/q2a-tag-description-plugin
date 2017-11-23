@@ -35,7 +35,7 @@ class qa_tag_descriptions_widget {
 			echo '<A HREF="'.$editurlhtml.'">'.qa_lang_html('plugin_tag_desc/create_desc_link').'</A>';
 		} else{
 			echo '<SPAN STYLE="font-size:'.(int)qa_opt('plugin_tag_desc_font_size').'px;">';
-			echo str_replace('^', qa_html($tag), qa_lang('plugin_tag_desc/no_desc'));
+			echo str_replace('[baseurl]',qa_opt('site_url'), str_replace('^', qa_html($tag), qa_lang('plugin_tag_desc/no_desc')));
 			echo '</SPAN>';
 		}
 		if((int)qa_opt('enable_ask_with_tags')){
