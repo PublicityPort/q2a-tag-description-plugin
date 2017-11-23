@@ -34,9 +34,15 @@ class qa_tag_descriptions_widget {
 		} elseif ($allowediting){
 			echo '<A HREF="'.$editurlhtml.'">'.qa_lang_html('plugin_tag_desc/create_desc_link').'</A>';
 		} else{
+			echo '<SPAN STYLE="font-size:'.(int)qa_opt('plugin_tag_desc_font_size').'px;">';
 			echo str_replace('^', qa_html($tag), qa_lang('plugin_tag_desc/no_desc'));
+			echo '</SPAN>';
 		}
-			
+		if((int)qa_opt('enable_ask_with_tags')){
+			echo '<DIV STYLE="font-size:'.(int)qa_opt('plugin_tag_desc_font_size').'px;">';
+			echo str_replace('[baseurl]',qa_opt('site_url'), str_replace('^', qa_html($tag), qa_lang('plugin_tag_desc/ask_with_tag')));
+			echo '</DIV>';
+		}
 			//qa_lang_html_sub('plugin_tag_desc/no_desc', qa_html($tag));
 	}
 
@@ -69,6 +75,7 @@ class qa_tag_descriptions_widget {
 			qa_opt('plugin_tag_desc_max_len', (int)qa_post_text('plugin_tag_desc_ml_field'));
 			qa_opt('plugin_tag_desc_font_size', (int)qa_post_text('plugin_tag_desc_fs_field'));
 			qa_opt('plugin_tag_desc_permit_edit', (int)qa_post_text('plugin_tag_desc_pe_field'));
+			qa_opt('enable_ask_with_tags',(int)qa_post_text('enable_ask_with_tags_cb'));
 			$saved=true;
 		}
 		
@@ -98,6 +105,13 @@ class qa_tag_descriptions_widget {
 					'value' => @$permitoptions[qa_opt('plugin_tag_desc_permit_edit')],
 					'options' => $permitoptions,
 					'tags' => 'NAME="plugin_tag_desc_pe_field"',
+				),
+
+				array(
+					'label' => 'Show "Ask with the tag" link. Needs <a href="https://github.com/PublicityPort/q2a-ask-with-tags-list">Ask with tags plugin</a>:',
+					'type' => 'checkbox',
+					'value' => (int)qa_opt('enable_ask_with_tags'),
+					'tags' => 'NAME="enable_ask_with_tags_cb"',
 				),
 			),
 			

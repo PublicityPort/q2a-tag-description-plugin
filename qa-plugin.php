@@ -1,9 +1,9 @@
 <?php
 
 /*
-	Plugin Name: Tag Descriptions Tutorial
+	Plugin Name: Tag Descriptions Plus
 	Plugin URI: http://www.question2answer.org/plugins-tutorial.php
-	Plugin Description: Allows tag descriptions to be displayed as tooltips
+	Plugin Description: Allows tag descriptions to be displayed as tooltips. Also, when you install "<a href="https://github.com/PublicityPort/q2a-ask-with-tags-list">Ask with Tags list</a>" plugin. You show a link with the widget.
 	Plugin Version: 1.0
 	Plugin Date: 2012-11-06
 	Plugin Author: Question2Answer

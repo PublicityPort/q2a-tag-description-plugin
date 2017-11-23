@@ -6,7 +6,7 @@ This is a plugin for **Question2Answer** that allows tag descriptions to be show
 
 
 ## Description ##
-This is a copy of http://docs.question2answer.org/plugins/tutorial/
+This is a copy of http://docs.question2answer.org/plugins/tutorial/. Allows tag descriptions to be displayed as tooltips. Also, when you install "<a href="https://github.com/PublicityPort/q2a-ask-with-tags-list">Ask with Tags list</a>" plugin. You show a link with the widget.
 
 
 ## Installation ##
